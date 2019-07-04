@@ -1,0 +1,12 @@
+main: me.cynicalpopcorn.fairspectator.Main
+name: FairSpectator
+version: 0.1
+author: CyNicole
+description: A friendly spector mode that will move the player back when they leave spectator mode.
+commands:
+  spectator:
+    description: Enter spectator mode.
+    usage: /spectator
+  survival:
+    description: Return to survival.
+    usage: /survival
