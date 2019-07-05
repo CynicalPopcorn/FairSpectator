@@ -89,14 +89,14 @@ public class Main extends JavaPlugin {
         return null;
     }
     
-    public PlayerLocationYML createPlayerLocation(String UUID, String PlayerName, double x, double y, double z, String worldName) {
+    public PlayerLocationYML createPlayerLocation(String UUID, String PlayerName, double x, double y, double z, String worldName, float pitch, float yaw) {
         //Check if it exists, if it does just return it
         PlayerLocationYML getCheck = getPlayerLocation(UUID);
         
         if (getCheck != null) {
             return getCheck;
         } else {
-            PlayerLocationYML newPlayerLocation = new PlayerLocationYML(UUID, PlayerName, x, y, z, worldName);
+            PlayerLocationYML newPlayerLocation = new PlayerLocationYML(UUID, PlayerName, x, y, z, worldName, pitch, yaw);
             newPlayerLocation.savePlayerFile();
             return newPlayerLocation;
         }

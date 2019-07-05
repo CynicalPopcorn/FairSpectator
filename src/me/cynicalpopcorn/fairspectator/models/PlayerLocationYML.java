@@ -33,17 +33,20 @@ public class PlayerLocationYML implements ConfigurationSerializable {
     private double Y;
     private double Z;
     private String worldUID;
-    
+    private float pitch;
+    private float yaw;
     /*
     Constructor for object creation programmatically
     */
-    public PlayerLocationYML(String UUID, String playerName, double x, double y, double z, String worldUID) {
+    public PlayerLocationYML(String UUID, String playerName, double x, double y, double z, String worldUID, float pitch, float yaw) {
         this.UUID = UUID;
         this.playerName = playerName;
         this.X = x;
         this.Y = y;
         this.Z = z;
         this.worldUID = worldUID;
+        this.pitch = pitch;
+        this.yaw = yaw;
     }
     
     /*
@@ -56,6 +59,8 @@ public class PlayerLocationYML implements ConfigurationSerializable {
         Y = (double) map.get("Y");
         Z = (double) map.get("Z");
         worldUID = (String) map.get("worldUID");
+        pitch = (float) map.get("pitch");
+        yaw = (float) map.get("yaw");
     }
     
     @Override
@@ -70,6 +75,8 @@ public class PlayerLocationYML implements ConfigurationSerializable {
         map.put("Y", Y);
         map.put("Z", Z);
         map.put("worldUID", worldUID);
+        map.put("pitch", pitch);
+        map.put("yaw", yaw);
         
         //Return the map
         return map;
@@ -78,11 +85,13 @@ public class PlayerLocationYML implements ConfigurationSerializable {
     /*
     Sets the co-ordinates for the player
     */
-    public void setPlayerCoordinates(double x, double y, double z, String worldUID) {
+    public void setPlayerCoordinates(double x, double y, double z, String worldUID, float pitch, float yaw) {
         this.X = x;
         this.Y = y;
         this.Z = z;
         this.worldUID = worldUID;
+        this.pitch = pitch;
+        this.yaw = yaw;
     }
     
     /**
@@ -91,6 +100,14 @@ public class PlayerLocationYML implements ConfigurationSerializable {
      */
     public List<Double> getPlayerCoordinates() {
         return Arrays.asList(this.X, this.Y, this.Z);
+    }
+    
+    /**
+     * Get the viewpoint stored for the player
+     * @return List ordered pitch, yaw
+     */
+    public List<Float> getViewpoint() {
+        return Arrays.asList(this.pitch, this.yaw);
     }
     
     /**

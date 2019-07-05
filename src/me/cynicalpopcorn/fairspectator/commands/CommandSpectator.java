@@ -47,7 +47,7 @@ public class CommandSpectator implements CommandExecutor {
             PlayerLocationYML loc = Main.getInstance().getPlayerLocation(pl.getUniqueId().toString());
             
             //Save their location
-            loc.setPlayerCoordinates(pl.getLocation().getX(), pl.getLocation().getY(), pl.getLocation().getZ(), pl.getLocation().getWorld().getUID().toString());
+            loc.setPlayerCoordinates(pl.getLocation().getX(), pl.getLocation().getY(), pl.getLocation().getZ(), pl.getLocation().getWorld().getUID().toString(), pl.getLocation().getPitch(), pl.getLocation().getYaw());
             loc.savePlayerFile();
             
             //Now spectator them

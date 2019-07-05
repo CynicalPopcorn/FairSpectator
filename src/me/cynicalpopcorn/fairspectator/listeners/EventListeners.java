@@ -24,6 +24,6 @@ public class EventListeners implements Listener {
         Player joinedPlayer = event.getPlayer();
         
         //Make them to ensure their file exists
-        Main.getInstance().createPlayerLocation(joinedPlayer.getUniqueId().toString(), joinedPlayer.getName(), joinedPlayer.getLocation().getX(), joinedPlayer.getLocation().getY(), joinedPlayer.getLocation().getZ(), joinedPlayer.getLocation().getWorld().getUID().toString());
+        Main.getInstance().createPlayerLocation(joinedPlayer.getUniqueId().toString(), joinedPlayer.getName(), joinedPlayer.getLocation().getX(), joinedPlayer.getLocation().getY(), joinedPlayer.getLocation().getZ(), joinedPlayer.getLocation().getWorld().getUID().toString(), joinedPlayer.getLocation().getPitch(), joinedPlayer.getLocation().getYaw());
     }
 }
