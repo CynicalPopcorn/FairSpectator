@@ -6,7 +6,10 @@
 package main.java.me.cynicalpopcorn.fairspectator;
 
 import java.io.File;
+import main.java.me.cynicalpopcorn.fairspectator.commands.CommandSpectator;
+import main.java.me.cynicalpopcorn.fairspectator.listeners.EventListeners;
 import main.java.me.cynicalpopcorn.fairspectator.models.PlayerLocationYML;
+import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -40,8 +43,11 @@ public class Main extends JavaPlugin {
         //Register serializable
         ConfigurationSerialization.registerClass(PlayerLocationYML.class, "pLocation");
         
-        //TODO: Add commands
+        //Commands
+        this.getCommand("spectator").setExecutor(new CommandSpectator());
         
+        //Event listeners
+        Bukkit.getServer().getPluginManager().registerEvents(new EventListeners(), this);
         
         //We ready
         getLogger().info("Enabled FairSpectator");
