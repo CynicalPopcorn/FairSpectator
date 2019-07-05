@@ -66,7 +66,7 @@ public class CommandSurvival implements CommandExecutor {
             
             //Set their gamemode
             pl.setGameMode(GameMode.SURVIVAL);
-            cs.sendMessage(String.format("%sYou have entered survival mode and returned to where you were when you last ran /spectator. Enjoy!", ChatColor.AQUA));
+            //cs.sendMessage(String.format("%sYou have entered survival mode and returned to where you were when you last ran /spectator. Enjoy!", ChatColor.AQUA));
             return true;
         } else {
             cs.sendMessage(String.format("%sYou must run this command as a player.", ChatColor.RED));

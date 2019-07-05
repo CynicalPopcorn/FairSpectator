@@ -52,7 +52,7 @@ public class CommandSpectator implements CommandExecutor {
             
             //Now spectator them
             pl.setGameMode(GameMode.SPECTATOR);
-            cs.sendMessage(String.format("%sYou have entered spectator mode. Use /survival to return.", ChatColor.AQUA));
+            //cs.sendMessage(String.format("%sYou have entered spectator mode. Use /survival to return.", ChatColor.AQUA));
             return true;
         } else {
             cs.sendMessage(String.format("%sYou must run this command as a player.", ChatColor.RED));
