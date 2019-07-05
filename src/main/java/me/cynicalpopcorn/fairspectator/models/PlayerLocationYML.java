@@ -29,19 +29,21 @@ public class PlayerLocationYML implements ConfigurationSerializable {
     //Class vars
     private String UUID;
     private String playerName;
-    private float X;
-    private float Y;
-    private float Z;
+    private double X;
+    private double Y;
+    private double Z;
+    private String worldUID;
     
     /*
     Constructor for object creation programmatically
     */
-    public PlayerLocationYML(String UUID, String playerName, float x, float y, float z) {
+    public PlayerLocationYML(String UUID, String playerName, double x, double y, double z, String worldUID) {
         this.UUID = UUID;
         this.playerName = playerName;
         this.X = x;
         this.Y = y;
         this.Z = z;
+        this.worldUID = worldUID;
     }
     
     /*
@@ -50,9 +52,10 @@ public class PlayerLocationYML implements ConfigurationSerializable {
     public PlayerLocationYML(Map<String, Object> map) {
         UUID = (String) map.get("UUID");
         playerName = (String) map.get("playerName");
-        X = (float) map.get("X");
-        Y = (float) map.get("Y");
-        Z = (float) map.get("Z");
+        X = (double) map.get("X");
+        Y = (double) map.get("Y");
+        Z = (double) map.get("Z");
+        worldUID = (String) map.get("worldUID");
     }
     
     @Override
@@ -66,6 +69,7 @@ public class PlayerLocationYML implements ConfigurationSerializable {
         map.put("X", X);
         map.put("Y", Y);
         map.put("Z", Z);
+        map.put("worldUID", worldUID);
         
         //Return the map
         return map;
@@ -74,18 +78,27 @@ public class PlayerLocationYML implements ConfigurationSerializable {
     /*
     Sets the co-ordinates for the player
     */
-    public void setPlayerCoordinates(float x, float y, float z) {
+    public void setPlayerCoordinates(double x, double y, double z, String worldUID) {
         this.X = x;
         this.Y = y;
         this.Z = z;
+        this.worldUID = worldUID;
     }
     
     /**
      * Get the co-ordinates stored for the player
      * @return List ordered X, Y, Z 
      */
-    public List<Float> getPlayerCoordinates() {
+    public List<Double> getPlayerCoordinates() {
         return Arrays.asList(this.X, this.Y, this.Z);
+    }
+    
+    /**
+     * Get the WorldUID
+     * @return String for the WorldUID
+     */
+    public String getPlayerWorldUID() {
+        return this.worldUID;
     }
     
     /**
