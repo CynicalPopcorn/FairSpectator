@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main.java.me.cynicalpopcorn.fairspectator.listeners;
+package me.cynicalpopcorn.fairspectator.listeners;
 
-import main.java.me.cynicalpopcorn.fairspectator.Main;
-import main.java.me.cynicalpopcorn.fairspectator.models.PlayerLocationYML;
+import me.cynicalpopcorn.fairspectator.Main;
+import me.cynicalpopcorn.fairspectator.models.PlayerLocationYML;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

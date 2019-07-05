@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main.java.me.cynicalpopcorn.fairspectator.models;
+package me.cynicalpopcorn.fairspectator.models;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import main.java.me.cynicalpopcorn.fairspectator.Main;
+import me.cynicalpopcorn.fairspectator.Main;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;

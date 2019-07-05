@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main.java.me.cynicalpopcorn.fairspectator;
+package me.cynicalpopcorn.fairspectator;
 
 import java.io.File;
-import main.java.me.cynicalpopcorn.fairspectator.commands.CommandSpectator;
-import main.java.me.cynicalpopcorn.fairspectator.commands.CommandSurvival;
-import main.java.me.cynicalpopcorn.fairspectator.listeners.EventListeners;
-import main.java.me.cynicalpopcorn.fairspectator.models.PlayerLocationYML;
+import me.cynicalpopcorn.fairspectator.commands.CommandSpectator;
+import me.cynicalpopcorn.fairspectator.commands.CommandSurvival;
+import me.cynicalpopcorn.fairspectator.listeners.EventListeners;
+import me.cynicalpopcorn.fairspectator.models.PlayerLocationYML;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
