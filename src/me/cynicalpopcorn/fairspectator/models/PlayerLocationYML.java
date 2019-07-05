@@ -33,8 +33,8 @@ public class PlayerLocationYML implements ConfigurationSerializable {
     private double Y;
     private double Z;
     private String worldUID;
-    private float pitch;
-    private float yaw;
+    private double pitch;
+    private double yaw;
     /*
     Constructor for object creation programmatically
     */
@@ -45,8 +45,8 @@ public class PlayerLocationYML implements ConfigurationSerializable {
         this.Y = y;
         this.Z = z;
         this.worldUID = worldUID;
-        this.pitch = pitch;
-        this.yaw = yaw;
+        this.pitch = (double) pitch;
+        this.yaw = (double) yaw;
     }
     
     /*
@@ -59,8 +59,8 @@ public class PlayerLocationYML implements ConfigurationSerializable {
         Y = (double) map.get("Y");
         Z = (double) map.get("Z");
         worldUID = (String) map.get("worldUID");
-        pitch = (float) map.get("pitch");
-        yaw = (float) map.get("yaw");
+        pitch = (double) map.get("pitch");
+        yaw = (double) map.get("yaw");
     }
     
     @Override
@@ -90,8 +90,8 @@ public class PlayerLocationYML implements ConfigurationSerializable {
         this.Y = y;
         this.Z = z;
         this.worldUID = worldUID;
-        this.pitch = pitch;
-        this.yaw = yaw;
+        this.pitch = (double) pitch;
+        this.yaw = (double) yaw;
     }
     
     /**
@@ -107,7 +107,7 @@ public class PlayerLocationYML implements ConfigurationSerializable {
      * @return List ordered pitch, yaw
      */
     public List<Float> getViewpoint() {
-        return Arrays.asList(this.pitch, this.yaw);
+        return Arrays.asList((float) this.pitch, (float) this.yaw);
     }
     
     /**
