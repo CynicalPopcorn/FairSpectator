@@ -7,6 +7,7 @@ package main.java.me.cynicalpopcorn.fairspectator;
 
 import java.io.File;
 import main.java.me.cynicalpopcorn.fairspectator.commands.CommandSpectator;
+import main.java.me.cynicalpopcorn.fairspectator.commands.CommandSurvival;
 import main.java.me.cynicalpopcorn.fairspectator.listeners.EventListeners;
 import main.java.me.cynicalpopcorn.fairspectator.models.PlayerLocationYML;
 import org.bukkit.Bukkit;
@@ -45,6 +46,7 @@ public class Main extends JavaPlugin {
         
         //Commands
         this.getCommand("spectator").setExecutor(new CommandSpectator());
+        this.getCommand("survival").setExecutor(new CommandSurvival());
         
         //Event listeners
         Bukkit.getServer().getPluginManager().registerEvents(new EventListeners(), this);
